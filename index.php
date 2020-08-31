@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <div class="header">
@@ -12,8 +13,8 @@
         <p>Resize the browser window to see the efect</p>
     </div>
     <div class="topnav">
-            <a href="#">Home</a>
-            <a href="#section_insert">Insert</a>
+            <a href="index.php">Home</a>
+            <a href="insertForm.php">Insert</a>
             <a href="#">Contact</a>
             <a class="right" href="#">About</a>
     </div>
@@ -37,18 +38,17 @@
         <div class="rightcolumn">
             <div class="card">
                 <h2>About Me</h2>
-                <div class="fakeimg" style="height: 100px">Image</div>
+                <div class="fakeimg" style="height: 100px">
+                </div>
                 <p>Some text about me</p>
             </div>
-            <div class="card">
+            <div class="card popular_post">
                 <h3>Popular Post</h3>
-                <div class="fakeimg"><p>Image</p></div>
-                <div class="fakeimg"><p>Image</p></div>
-                <div class="fakeimg"><p>Image</p></div>
+                <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi saepe ut explicabo inventore doloribus iste! Vel veniam esse nam quae repudiandae doloribus nemo iste aut officiis? Culpa minus labore odit."</p>
             </div>
-            <div class="card">
+            <div class="card follow_me">
                 <h3>Follow Me</h3>
-                <p>Some text</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ipsa sed nisi exercitationem facilis minus laudantium rem laborum doloribus. Eum porro dolore incidunt dicta facere aspernatur rerum voluptates aut amet?</p>
             </div>
         </div>
     </div>

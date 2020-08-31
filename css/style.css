@@ -21,7 +21,8 @@ body {
 /* STYLE TOP NAVIGATION */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background: linear-gradient(to left, #44a08d, #093637);
+  width: 100%;
 }
 
 .topnav a {
@@ -31,6 +32,7 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .topnav a:hover {
@@ -55,9 +57,11 @@ body {
 
 /* fake image */
 .fakeimg {
-  background-color: #aaa;
+  background: linear-gradient(to left, #44a08d, #093637);
+  opacity: 60%;
   width: 100%;
   padding: 20px;
+  font-weight: bold;
 }
 
 /*  add a card efect */
@@ -66,6 +70,12 @@ body {
   padding: 20px;
   margin-top: 20px;
 }
+
+.popular_post p, .follow_me p {
+  text-align: center;
+}
+
+
 
 /* clear floats after column */
 .row:after {
@@ -78,7 +88,7 @@ body {
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
+  background: linear-gradient(to left, #44a08d, #093637);
   margin-top: 20px;
 }
 
@@ -88,6 +98,9 @@ body {
   .rightcolumn {
     width: 100%;
     padding: 0;
+  }
+  body{
+    text-align: center;
   }
 }
 
