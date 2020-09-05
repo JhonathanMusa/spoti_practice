@@ -17,3 +17,13 @@
             <a href="#">Contact</a>
             <a class="right" href="#">About</a>
     </div>
+
+    <form action="insertAction.php" method="post">
+        <input type="text" >
+        <input type="text">
+        <input type="submit">
+    </form>
+
+
+</body>
+</html>
