@@ -18,11 +18,13 @@
             <a class="right" href="#">About</a>
     </div>
 
-    <form action="insertAction.php" method="post">
-        <input type="text" >
-        <input type="text">
-        <input type="submit">
-    </form>
+    <div class="user-input-container">
+        <form action="insertAction.php" method="post"><br>
+            <input class="insert-input" type="text" name="user" placeholder="Username" ><br>
+            <input class="insert-input" type="text" name="password" placeholder="Password"><br>
+            <input id="btn-insert" type="submit" value="Done">
+        </form>
+    </div>
 
 
 </body>
