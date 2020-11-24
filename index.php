@@ -18,38 +18,37 @@
             <a href="#">Contact</a>
             <a class="right" href="#">About</a>
     </div>
-    <div class="row">
-        <div class="leftcolumn">
-            <div class="card">
-                <h2>TITLE HEADING</h2>
-                <h5>Title Description</h5>
-                <div class="fakeimg" style="height: 200px">Image</div>
-                <p>Some text</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quos aliquam beatae suscipit sapiente nesciunt eaque ullam, voluptatem non deserunt, autem officiis quibusdam iusto soluta repudiandae ea quae minima similique.</p>
-            </div>
-            <div class="card">
-                <h2>TITLE HEADING</h2>
-                <H5>Title Description</H5>
-                <div class="fakeimg" style="height: 200px">Image</div>
-                <p>Some text</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet doloribus eum porro labore rem illum! Tempora cupiditate repellat expedita ab veniam repellendus eligendi, natus alias! Maiores quaerat voluptatum animi atque.</p>
-            </div>
-        </div>
-        <div class="rightcolumn">
-            <div class="card">
-                <h2>About Me</h2>
-                <div class="fakeimg" style="height: 100px">
+    <div class="flex-container">
+        <div class="row">
+                <div class="card1">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title Description</h5>
+                    <div class="fakeimg" style="height: 200px">Image</div>
+                    <p>Some text</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quos aliquam beatae suscipit sapiente nesciunt eaque ullam, voluptatem non deserunt, autem officiis quibusdam iusto soluta repudiandae ea quae minima similique.</p>
                 </div>
-                <p>Some text about me</p>
-            </div>
-            <div class="card popular_post">
-                <h3>Popular Post</h3>
-                <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi saepe ut explicabo inventore doloribus iste! Vel veniam esse nam quae repudiandae doloribus nemo iste aut officiis? Culpa minus labore odit."</p>
-            </div>
-            <div class="card follow_me">
-                <h3>Follow Me</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ipsa sed nisi exercitationem facilis minus laudantium rem laborum doloribus. Eum porro dolore incidunt dicta facere aspernatur rerum voluptates aut amet?</p>
-            </div>
+         <!--        <div class="card1">
+                    <h2>TITLE HEADING</h2>
+                    <H5>Title Description</H5>
+                    <div class="fakeimg" style="height: 200px">Image</div>
+                    <p>Some text</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet doloribus eum porro labore rem illum! Tempora cupiditate repellat expedita ab veniam repellendus eligendi, natus alias! Maiores quaerat voluptatum animi atque.</p>
+                </div> -->
+                <div class="card2">
+                    <h2>About Me</h2>
+                    <div class="fakeimg" style="height: 100px">
+                    </div>
+                    <p>Some text about me</p>
+                    </div>
+                </div>
+                <div class="card popular_post">
+                    <h3>Popular Post</h3>
+                    <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi saepe ut explicabo inventore doloribus iste! Vel veniam esse nam quae repudiandae doloribus nemo iste aut officiis? Culpa minus labore odit."</p>
+                </div>
+                 <div class="card follow_me">
+                    <h3>Follow Me</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ipsa sed nisi exercitationem facilis minus laudantium rem laborum doloribus. Eum porro dolore incidunt dicta facere aspernatur rerum voluptates aut amet?</p>
+                </div>
         </div>
     </div>
     <div class="footer">

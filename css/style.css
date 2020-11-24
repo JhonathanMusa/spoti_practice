@@ -23,13 +23,13 @@ body {
   overflow: hidden;
   background: linear-gradient(to left, #44a08d, #093637);
   width: 100%;
+  height: 40px;
+  display: flex;
 }
 
 .topnav a {
-  float: left;
-  display: block;
+  display: inline;
   color: #f2f2f2;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-weight: bold;
@@ -42,17 +42,39 @@ body {
 
 /* COLUMNS */
 /* left column */
-.leftcolumn {
-  float: left;
-  width: 75%;
+
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 500px;
+  margin: auto;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.card1 {
+  width: 70%;
+  min-width: 300px;
+  background-color: white;
+  padding: 0 20px;
+  margin: 20px 0;
 }
 
 /* right column */
-.rightcolumn {
-  float: left;
+.card2 {
   width: 25%;
+  height: 410px;
   background-color: #f1f1f1;
-  padding-left: 20px;
+  min-width: 300px;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 /* fake image */
@@ -69,11 +91,15 @@ body {
   background-color: white;
   padding: 20px;
   margin-top: 20px;
+  margin-left: 35px;
 }
 
 .popular_post p,
 .follow_me p {
   text-align: center;
+  display: flex;
+  max-width: 600px;
+  margin: auto;
 }
 
 /* INSERT FORM */
