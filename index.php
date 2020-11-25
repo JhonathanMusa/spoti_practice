@@ -27,13 +27,6 @@
                     <p>Some text</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quos aliquam beatae suscipit sapiente nesciunt eaque ullam, voluptatem non deserunt, autem officiis quibusdam iusto soluta repudiandae ea quae minima similique.</p>
                 </div>
-         <!--        <div class="card1">
-                    <h2>TITLE HEADING</h2>
-                    <H5>Title Description</H5>
-                    <div class="fakeimg" style="height: 200px">Image</div>
-                    <p>Some text</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet doloribus eum porro labore rem illum! Tempora cupiditate repellat expedita ab veniam repellendus eligendi, natus alias! Maiores quaerat voluptatum animi atque.</p>
-                </div> -->
                 <div class="card2">
                     <h2>About Me</h2>
                     <div class="fakeimg" style="height: 100px">

@@ -25,6 +25,7 @@ body {
   width: 100%;
   height: 40px;
   display: flex;
+  align-items: center;
 }
 
 .topnav a {
@@ -36,7 +37,7 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #45a07d;
   color: black;
 }
 
@@ -54,27 +55,29 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: auto;
+  margin: 6px;
 }
 
 .card1 {
-  width: 70%;
-  min-width: 300px;
   background-color: white;
-  padding: 0 20px;
-  margin: 20px 0;
+  padding: 10px;
+  margin: 10px auto; 
+  order: 1;
+  flex: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+
 
 /* right column */
 .card2 {
-  width: 25%;
-  height: 410px;
-  background-color: #f1f1f1;
-  min-width: 300px;
-  background-color: white;
+  background-color: #fff;
   padding: 20px;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin: 10px 0;
+  margin-left: 10px;
+  order: 2;
+  flex: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* fake image */
@@ -89,9 +92,10 @@ body {
 /*  add a card efect */
 .card {
   background-color: white;
+  flex: 1;
   padding: 20px;
-  margin-top: 20px;
-  margin-left: 35px;
+  margin: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .popular_post p,
@@ -100,6 +104,7 @@ body {
   display: flex;
   max-width: 600px;
   margin: auto;
+  flex: 1;
 }
 
 /* INSERT FORM */
@@ -142,6 +147,7 @@ body {
   text-align: center;
   background: linear-gradient(to left, #44a08d, #093637);
   margin-top: 20px;
+  color: #fff;
 }
 
 /* responsive design less than 800px */
