@@ -1,2 +1,2 @@
-# php_user_verification
-User verification with PHP
+# php_simple_web
+A simple web page with php
