@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  align-items: center;
+  background-color: #4b4b4b;
+  height: 4rem;
+  font-size: 1.2rem;
+  color: white;
+  padding: 5px
+}
+
+.home,
+.register,
+.login {
+  text-decoration: none;
+  color: #aaa;
+  padding: 5px;
+}
+
+
+.home:hover,
+.register:hover,
+.login:hover {
+  color: #fff;
+}
