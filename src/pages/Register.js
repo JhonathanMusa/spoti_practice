@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
 import styles from "./Register.module.css";
+import { Link } from "react-router-dom";
 
 export const Register = () => {
   const [userData, setUserData] = useState([]);
@@ -16,43 +17,64 @@ export const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(userData);
-    localStorage.setItem("name", userData.name, 2);
-    history.push("/");
+
+    if (
+      userData.name !== "" &&
+      userData.email !== "" &&
+      userData.password !== ""
+    ) {
+      history.push("/dashboard");
+    }
+
+    localStorage.setItem("name", userData.name);
   };
 
   return (
     <div className={styles.container}>
       <form className={styles.form_register} onSubmit={handleSubmit}>
-        <input
-          className={styles.form_input}
-          name="name"
-          onChange={handleRegister}
-          placeholder="Name"
-          type="text"
-          value={userData.name}
-        />
+        <div>
+          <input
+            className={styles.form_input}
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={userData.name}
+            onChange={handleRegister}
+          />
+        </div>
+        <div>
+          <input
+            className={styles.form_input}
+            name="email"
+            onChange={handleRegister}
+            placeholder="Email"
+            type="email"
+            value={userData.email}
+          />
+        </div>
+        <div>
+          <input
+            className={styles.form_input}
+            name="password"
+            onChange={handleRegister}
+            placeholder="Password"
+            type="password"
+            value={userData.password}
+          />
+        </div>
 
-        <input
-          className={styles.form_input}
-          name="email"
-          onChange={handleRegister}
-          placeholder="Email"
-          type="email"
-          value={userData.email}
-        />
+        <div>
+          <button className={styles.registerBtn} type="submit">
+            Register
+          </button>
+        </div>
 
-        <input
-          className={styles.form_input}
-          name="password"
-          onChange={handleRegister}
-          placeholder="Password"
-          type="password"
-          value={userData.password}
-        />
-
-        <button className={styles.registerBtn} type="submit">
-          Register
-        </button>
+        <div>
+          Already has an account?{" "}
+          <Link className={styles.linkTo} to="/login">
+            Sign In
+          </Link>
+        </div>
       </form>
     </div>
   );

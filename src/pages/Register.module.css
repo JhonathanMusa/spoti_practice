@@ -31,3 +31,12 @@
 .registerBtn:hover {
   color: #fff;
 }
+
+.linkTo {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.linkTo:hover {
+  color: #15A0BF;
+}

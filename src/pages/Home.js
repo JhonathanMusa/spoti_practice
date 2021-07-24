@@ -1,11 +1,10 @@
-import { Header } from "../components/Header";
+import { useHistory } from "react-router-dom";
 
 export const Home = () => {
   const value = localStorage.getItem("name");
-  return (
-    <div>
-      <Header />
-      {value !== undefined && <h1>Welcome {value}</h1>}
-    </div>
-  );
+  const history = useHistory();
+  if (value) {
+    history.push("/dashboard");
+  }
+  return <div>Welcome</div>;  
 };
