@@ -3,65 +3,55 @@ import { useHistory } from "react-router";
 import styles from "./Register.module.css";
 import { Link } from "react-router-dom";
 
+import { useForm } from "react-hook-form";
+
 export const Register = () => {
   const [userData, setUserData] = useState([]);
   const history = useHistory();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const handleRegister = (e) => {
-    setUserData({
-      ...userData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(userData);
-
-    if (
-      userData.name !== "" &&
-      userData.email !== "" &&
-      userData.password !== ""
-    ) {
-      history.push("/dashboard");
-    }
-
+  const registerSubmit = (data) => {
+    setUserData(data);
     localStorage.setItem("name", userData.name);
+    history.push("/dashboard");
   };
 
   return (
-    <div className={styles.container}>
-      <form className={styles.form_register} onSubmit={handleSubmit}>
-        <div>
-          <input
-            className={styles.form_input}
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={userData.name}
-            onChange={handleRegister}
-          />
-        </div>
-        <div>
-          <input
-            className={styles.form_input}
-            name="email"
-            onChange={handleRegister}
-            placeholder="Email"
-            type="email"
-            value={userData.email}
-          />
-        </div>
-        <div>
-          <input
-            className={styles.form_input}
-            name="password"
-            onChange={handleRegister}
-            placeholder="Password"
-            type="password"
-            value={userData.password}
-          />
-        </div>
+    <div>
+      <form
+        className={styles.form_register}
+        onSubmit={handleSubmit(registerSubmit)}
+      >
+        <input
+          className={styles.form_input}
+          placeholder="Name"
+          type="text"
+          value={userData.name}
+          {...register("name", { required: true })}
+        />
+        {errors.name && <span>Name is required</span>}
+
+        <input
+          className={styles.form_input}
+          placeholder="Email"
+          type="email"
+          value={userData.email}
+          {...register("email", { required: true })}
+        />
+        {errors.email && <span>Email is required</span>}
+
+        <input
+          className={styles.form_input}
+          placeholder="Password"
+          type="password"
+          value={userData.password}
+          {...register("password", { required: true })}
+        />
+        {errors.password && <span>Password is required</span>}
 
         <div>
           <button className={styles.registerBtn} type="submit">
