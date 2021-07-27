@@ -15,8 +15,9 @@ export const Register = () => {
   } = useForm();
 
   const registerSubmit = (data) => {
+    console.log(data);
     setUserData(data);
-    localStorage.setItem("name", userData.name);
+    localStorage.setItem("name", data.name);
     history.push("/dashboard");
   };
 
@@ -26,6 +27,9 @@ export const Register = () => {
         className={styles.form_register}
         onSubmit={handleSubmit(registerSubmit)}
       >
+        {errors.name && (
+          <span className={styles.input_error}>Name is required</span>
+        )}
         <input
           className={styles.form_input}
           placeholder="Name"
@@ -33,8 +37,10 @@ export const Register = () => {
           value={userData.name}
           {...register("name", { required: true })}
         />
-        {errors.name && <span>Name is required</span>}
 
+        {errors.email && (
+          <span className={styles.input_error}>Email is required</span>
+        )}
         <input
           className={styles.form_input}
           placeholder="Email"
@@ -42,8 +48,10 @@ export const Register = () => {
           value={userData.email}
           {...register("email", { required: true })}
         />
-        {errors.email && <span>Email is required</span>}
 
+        {errors.password && (
+          <span className={styles.input_error}>Password is required</span>
+        )}
         <input
           className={styles.form_input}
           placeholder="Password"
@@ -51,7 +59,6 @@ export const Register = () => {
           value={userData.password}
           {...register("password", { required: true })}
         />
-        {errors.password && <span>Password is required</span>}
 
         <div>
           <button className={styles.registerBtn} type="submit">
