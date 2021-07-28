@@ -8,7 +8,8 @@ export const Header = () => {
   const history = useHistory();
 
   const handleLogout = () => {
-    localStorage.removeItem("name");
+    localStorage.removeItem("Token Login");
+    localStorage.removeItem("Token API");
     history.push("/");
   };
 

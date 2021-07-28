@@ -1,12 +1,10 @@
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./Register.module.css";
 
+const AUTH_URL =
+  "https://accounts.spotify.com/authorize?client_id=c15e7582e1c9436b930359c713a8dfb3&response_type=code&redirect_uri=http://localhost:3000/dashboard&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state";
+
 export const Home = () => {
-  const value = localStorage.getItem("name");
-  const history = useHistory();
-  if (value) {
-    history.push("/dashboard");
-  }
   return (
     <div className={styles.container}>
       <h1>Welcome</h1>
@@ -19,6 +17,9 @@ export const Home = () => {
       <Link to="/register">
         <button className={styles.btnHome}>Register</button>
       </Link>
+      <a href={AUTH_URL}>
+        <button className={styles.btnHome}>Login</button>
+      </a>
     </div>
   );
 };

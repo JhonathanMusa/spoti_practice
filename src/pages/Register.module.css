@@ -87,3 +87,20 @@
 .container__dashboard{
   text-align: center;
 }
+
+.loginContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.btnLogin{
+  background: green;
+  width: 10rem;
+  height: 30px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+}
