@@ -1,17 +1,19 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { token } from "../token";
 import { Card } from "./Card";
 
 export const Home = () => {
   const [data, setData] = useState([]);
+  const apiToken = token();
+
   const fetchData = async () => {
     try {
       const { data } = await axios.get(
         "https://api.spotify.com/v1/browse/new-releases?offset=0&limit=20",
         {
           headers: {
-            Authorization:
-              "Bearer BQAiZX4UFd57LnuxwHLAluZQS2pFTt4XFDqMC32aE1_jB8LsA8-79mfAoVbemxJZIp_MvYjMr5bzgIMaQ-A",
+            Authorization: `Bearer ${apiToken}`,
           },
         }
       );
@@ -24,6 +26,7 @@ export const Home = () => {
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

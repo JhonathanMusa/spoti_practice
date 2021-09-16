@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { token } from "../token";
 import { CardSearch } from "./CardSearch";
 
 export const Search = () => {
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
+  const apiToken = token();
 
   const fetchArtist = async () => {
     try {
@@ -12,12 +14,11 @@ export const Search = () => {
         `https://api.spotify.com/v1/search?query=${search}&type=artist&offset=0&limit=20`,
         {
           headers: {
-            Authorization:
-              "Bearer BQAiZX4UFd57LnuxwHLAluZQS2pFTt4XFDqMC32aE1_jB8LsA8-79mfAoVbemxJZIp_MvYjMr5bzgIMaQ-A",
+            Authorization: `Bearer ${apiToken}`,
           },
         }
       );
-      console.log(data.artists.items);
+      // console.log(data.artists.items);
       setData(data.artists.items);
     } catch (error) {
       console.log(error);
@@ -26,10 +27,11 @@ export const Search = () => {
 
   useEffect(() => {
     fetchArtist();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
 
   const handleChange = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     setSearch(e.target.value);
   };
 
