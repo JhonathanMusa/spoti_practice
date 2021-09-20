@@ -1,2 +1,2 @@
 # spoti_practice
-Practice with spotify API, built with React
+Practice project built with React and Spotify API
